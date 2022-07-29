@@ -1,4 +1,4 @@
-# mySwiftLibrary
+# swift notes to myself
 
  -DarkMode
  -PlaySound
