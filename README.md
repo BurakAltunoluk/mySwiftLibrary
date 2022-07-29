@@ -1,5 +1,15 @@
 # mySwiftLibrary
 
+ -DarkMode
+ -PlaySound
+ -ImageFromUrl
+ -PhoneVibration
+ -DispatchQueue
+ -StatusBar
+ -StringFormat
+ -RotateImage
+ -ImageXYCordinate
+
 
 ```swift
 
