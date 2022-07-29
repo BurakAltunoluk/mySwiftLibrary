@@ -3,7 +3,35 @@
 
 ```swift
 
-  //----------------------------------
+  //----------- Dark Mode : -----------------
+  
+  let userInterfaceStyle = traitCollection.UserInterfaceStyle
+  
+  if userInterFaceStyle == .dark {
+  //code
+  }
+
+  //---
+  
+  override func traitCollectionDidChange( _ previousTraitCollection: UITraitCollection?) {
+  
+  
+  
+  }
+  //---
+  
+      override func viewDidLoad() {
+        super.viewDidLoad()
+        overrideUserInterfaceStyle= .light 
+       
+    }
+  //---
+  
+  info.playlist 
+  userInterfaceStyle = .dark
+                       .light
+
+  //--------------playSound--------------------
 
   import UIKit
   import AVFoundation
@@ -19,8 +47,35 @@
                 
        }
     }
+    //------------- image from url  ---------------------
     
-
+    let urlString = "https://..............jpeg"
+    let imageData = try! Data(contentsOf:URL(string: urlStrings!)!)
+    imageView.image = UIimage(data: datam)
+    
+    //----------------------------------
+    
+    if df == nil ? 0 : 1
+    
+    //------------------------------------
+    
+    
+    let duration = String(format: "%.01f",3,32210)   //output 3.3
+    
+    //------------------------------------
+    
+    import AudioToolbox
+    
+    AudioServicesPlayAlertSound(1521)
+    
+    
+    
+    //------------------------------------
+    
+    image.frame.origin.x = 20
+    image.frame.origin.x = 40
+    
+    
     //-------------------------------------
 
     imageView.transform = imageView.transform.rotated(by: 0.2)
