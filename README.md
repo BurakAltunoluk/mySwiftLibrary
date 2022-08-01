@@ -103,3 +103,32 @@
            }
         
     //-------------------------------------
+    
+      func scrollToBottom(){
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: myChat.johnChat.count-1, section: 0)
+            self.messageTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
+    }
+    
+    //------------------------------------
+    
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        view.frame.origin.y = 0
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            view.frame.origin.y -= keyboardHeight
+            
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        view.frame.origin.y = 0
+    }
+    
+    private func setupKeyboardHiding() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
