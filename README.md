@@ -32,7 +32,7 @@
   
       override func viewDidLoad() {
         super.viewDidLoad()
-        overrideUserInterfaceStyle= .light 
+        overrideUserInterfaceStyle = .light 
        
     }
   //---
@@ -85,6 +85,10 @@
     image.frame.origin.x = 20
     image.frame.origin.x = 40
     
+    
+    //-------------------------------------
+       rightChatBox.layer.cornerRadius = 20
+       rightChatBox.layer.masksToBounds = true
     
     //-------------------------------------
 
