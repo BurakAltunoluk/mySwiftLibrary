@@ -9,6 +9,7 @@
  -StringFormat
  -RotateImage
  -ImageXYCordinate
+ -segmentController
 
 
 ```swift
@@ -114,7 +115,20 @@
             self.messageTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
         }
     }
-    
+    //-------------SEGMENTCONTROLLER-----------------------
+    switch segmentControlOutlet.selectedSegmentIndex {
+        case 0:
+            uiViewOutlet.backgroundColor = .red
+            segmentControlOutlet.backgroundColor = .red
+        case 1 :
+            uiViewOutlet.backgroundColor = .green
+            segmentControlOutlet.backgroundColor = .green
+        case 2:
+            uiViewOutlet.backgroundColor = .blue
+            segmentControlOutlet.backgroundColor = .blue
+        default:
+            break
+        }
     //------------------------------------
     
     
