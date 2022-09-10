@@ -10,6 +10,7 @@
  -RotateImage
  -ImageXYCordinate
  -segmentController
+ -NotificationCenter
 
 
 ```swift
@@ -150,3 +151,17 @@
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    
+    //-------NotificationService-------------
+    
+    // sendNotification 
+     NotificationCenter.default.post(name: Notification.Name("done"), object: nil)
+     
+     //ReceiveNotification
+     NotificationCenter.default.addObserver(self, selector:#selector(doneResponse) , name: Notification.Name("done"), object: nil)
+     
+     @objc func doneResponse() {
+       
+     }
+    //------------------------------------
