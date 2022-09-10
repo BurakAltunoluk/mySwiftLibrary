@@ -12,6 +12,9 @@
  -segmentController
  -NotificationCenter
 
+```html
+https://app.quicktype.io/
+
 
 ```swift
 
