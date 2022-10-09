@@ -169,4 +169,26 @@ https://app.quicktype.io/
      @objc func doneResponse() {
        
      }
-    //------------------------------------
+    //-----Blur Effect-----------------------
+    
+        //MARK: BlurEffect
+    func blurEffect() {
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(blurEffectView)
+    }
+    
+    func removeBlurView() {
+        for subview in view.subviews {
+            if subview.isKind(of: UIVisualEffectView.self) {
+                subview.removeFromSuperview()
+            }
+        }
+    }
+    
+    //-------------------------------------
+    
+    
