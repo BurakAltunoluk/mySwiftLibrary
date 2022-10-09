@@ -189,7 +189,17 @@ https://app.quicktype.io/
             }
         }
     }
-    
+    //-------------Extra Blur Affect---------
+   // self.view.backgroundColor = UIColor().transparentBlur()
+ //   You will need to create the blur effect using the UIBlurEffect Class in the viewDidLoad method. After that you’ll need to apply the effect to the //UIVisualEffectView.
+
+//The UIVisualEffectView needs to have the container dimensions defined, and it will be the first view of the stack of the view controller.
+
+let blurEffect = UIBlurEffect(style: .ExtraLight) 
+let blurEffectView = UIVisualEffectView(effect: blurEffect) 
+blurEffectView.frame = self.view.frame 
+self.view.insertSubview(blurEffectView, atIndex: 0
+
     //-------------------------------------
     
     
