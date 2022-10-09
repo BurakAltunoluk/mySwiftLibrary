@@ -11,6 +11,7 @@
  -ImageXYCordinate
  -segmentController
  -NotificationCenter
+ -Blur affect
 
 
 
@@ -169,9 +170,9 @@ https://app.quicktype.io/
      @objc func doneResponse() {
        
      }
-    //-----Blur Effect-----------------------
+    //-----Blur Affect-----------------------
     
-        //MARK: BlurEffect
+       
     func blurEffect() {
         
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
