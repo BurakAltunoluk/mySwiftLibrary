@@ -12,6 +12,7 @@
  -segmentController
  -NotificationCenter
  -Blur affect
+ -TextToSpeech
 
 
 
@@ -202,4 +203,15 @@ self.view.insertSubview(blurEffectView, atIndex: 0
 
     //-------------------------------------
     
+    //--------textToSpeech-----------------
+    
+      private func textToSpeech(choosedRow: String) {
+        let string = choosedRow
+        let utterance = AVSpeechUtterance(string: string)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+        let synth = AVSpeechSynthesizer()
+        synth.speak(utterance)
+    }
+    
+    //--------------------------------------
     
