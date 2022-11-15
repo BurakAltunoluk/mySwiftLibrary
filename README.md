@@ -13,6 +13,7 @@
  -NotificationCenter
  -Blur affect
  -TextToSpeech
+ -Text Replacing
 
 
 
@@ -213,5 +214,11 @@ self.view.insertSubview(blurEffectView, atIndex: 0
         synth.speak(utterance)
     }
     
+    //--------------Text Replacing----------------
+    
+    var testString = "Hello world"
+    testString.replacingOccurrences(of: " ", with: "%20")
+    
     //--------------------------------------
+    
     
