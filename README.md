@@ -14,6 +14,7 @@
  -Blur affect
  -TextToSpeech
  -Text Replacing
+ -CornerRadiusImage
 
 
 
@@ -220,5 +221,14 @@ self.view.insertSubview(blurEffectView, atIndex: 0
     testString.replacingOccurrences(of: " ", with: "%20")
     
     //--------------------------------------
+    //-----------Corner Radius Image --------
+    
+      plusButtonImage.layer.cornerRadius = 30
+      plusButtonImage.clipsToBounds = true
+    
+    //--------------------------------------
+    
+    
+    
     
     
