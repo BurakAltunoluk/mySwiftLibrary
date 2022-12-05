@@ -15,9 +15,7 @@
  -TextToSpeech
  -Text Replacing
  -CornerRadiusImage
-
-
-
+ -encode URL utf8  
 
 https://app.quicktype.io/
 
@@ -228,7 +226,9 @@ self.view.insertSubview(blurEffectView, atIndex: 0
     
     //--------------------------------------
     
+    //----------- encode URL utf8   -------------
+    
+        let output = self.wordInputTextFiled.text!.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)! as String
     
     
-    
-    
+    //--------------------------------------
