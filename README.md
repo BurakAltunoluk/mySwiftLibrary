@@ -81,6 +81,8 @@ https://app.quicktype.io/
     let rowHeight = contentHeight + (hasHeader ? 50 : 20)
     // rowHeight is equal to 90
     
+    a != nil ? a! : b
+    
     //------------------------------------
     
     
