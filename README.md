@@ -23,6 +23,79 @@ https://app.quicktype.io/
 
 ```swift
 
+ //----------- Srting  -----------------
+ 
+   let greeting = "Guten Tag!"
+   greeting[greeting.startIndex]
+   // G
+   greeting[greeting.index(before: greeting.endIndex)]
+   // !
+   greeting[greeting.index(after: greeting.startIndex)]
+   // u
+   let index = greeting.index(greeting.startIndex, offsetBy: 7)
+   greeting[index]
+   // a
+ 
+  //----
+  
+  var welcome = "hello"
+  welcome.insert("!", at: welcome.endIndex)
+  // welcome now equals "hello!"
+
+  welcome.insert(contentsOf: " there", at: welcome.index(before: welcome.endIndex))
+  // welcome now equals "hello there!"
+ 
+ 
+  //----
+  
+  welcome.remove(at: welcome.index(before: welcome.endIndex))
+  // welcome now equals "hello there"
+
+  let range = welcome.index(welcome.endIndex, offsetBy: -6)..<welcome.endIndex
+  welcome.removeSubrange(range)
+  // welcome now equals "hello"
+ 
+ //----
+ 
+  let greeting = "Hello, world!"
+  let index = greeting.firstIndex(of: ",") ?? greeting.endIndex
+  let beginning = greeting[..<index]
+  // beginning is "Hello"
+
+  // Convert the result to a String for long-term storage.
+  let newString = String(beginning)
+ 
+ //----
+ 
+ let romeoAndJuliet = [
+    "Act 1 Scene 1: Verona, A public place",
+    "Act 1 Scene 2: Capulet's mansion",
+    "Act 1 Scene 3: A room in Capulet's mansion",
+    "Act 1 Scene 4: A street outside Capulet's mansion",
+    "Act 1 Scene 5: The Great Hall in Capulet's mansion",
+    "Act 2 Scene 1: Outside Capulet's mansion",
+    "Act 2 Scene 2: Capulet's orchard",
+    "Act 2 Scene 3: Outside Friar Lawrence's cell",
+    "Act 2 Scene 4: A street in Verona",
+    "Act 2 Scene 5: Capulet's mansion",
+    "Act 2 Scene 6: Friar Lawrence's cell"
+]
+You can use the hasPrefix(_:) method with the romeoAndJuliet array to count the number of scenes in Act 1 of the play:
+
+var act1SceneCount = 0
+for scene in romeoAndJuliet {
+    if scene.hasPrefix("Act 1 ") {
+        act1SceneCount += 1
+    }
+}
+print("There are \(act1SceneCount) scenes in Act 1")
+// Prints "There are 5 scenes in Act 1"
+ 
+ 
+ 
+ 
+  //------------------------------
+
   //----------- Dark Mode : -----------------
   
   let userInterfaceStyle = traitCollection.UserInterfaceStyle
