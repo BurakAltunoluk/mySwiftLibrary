@@ -8,6 +8,7 @@
  -StatusBar
  -StringFormat
  -RotateImage
+ -Contains
  -ImageXYCordinate
  -segmentController
  -NotificationCenter
@@ -82,6 +83,15 @@ https://app.quicktype.io/
     // rowHeight is equal to 90
     
     a != nil ? a! : b
+ 
+    //--------------Contains-----------------
+ 
+    let range = ...5
+    range.contains(7)   // false
+    range.contains(4)   // true
+    range.contains(-1)  // true
+    
+    
     
     //------------------------------------
     
