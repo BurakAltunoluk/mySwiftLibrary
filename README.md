@@ -3,6 +3,7 @@
  -DarkMode
  -PlaySound
  -ImageFromUrl
+ -Animation
  -PhoneVibration
  -DispatchQueue
  -StatusBar
@@ -94,6 +95,17 @@ print("There are \(act1SceneCount) scenes in Act 1")
  
  
  
+  //------------------------------
+
+  //-----------Animation-----------
+  
+  
+ // UILabel nesnesinin merkezini 100 piksel sağa kaydırın
+UIView.animate(withDuration: 1.0, delay: 0, options: [.autoreverse, .repeat], animations: {
+    label.center.x += 100
+}, completion: nil)
+
+
   //------------------------------
 
   //----------- Dark Mode : -----------------
