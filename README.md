@@ -14,6 +14,7 @@
  -segmentController
  -NotificationCenter
  -Blur affect
+ -sizeAdjust
  -TextToSpeech
  -Text Replacing
  -CornerRadiusImage
@@ -218,6 +219,17 @@ UIView.animate(withDuration: 1.0, delay: 0, options: [.autoreverse, .repeat], an
            }
         
     //-------------------------------------
+      
+        //------------ sizeAdjust --------------
+        
+        tableView.frame = CGRect(x: 0, y: 0, width: 1000, height: 1000)
+        tableView.frame.size.height = 200
+        tableView.frame.size.width = 400
+    
+    
+       //---------------------------------------
+    
+    
     
       func scrollToBottom(){
         DispatchQueue.main.async {
